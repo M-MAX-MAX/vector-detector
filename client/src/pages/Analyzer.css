@@ -1,0 +1,61 @@
+/* Analyzer Component Styles */
+
+/* Smooth transitions for drag states */
+.analyzer-upload-area {
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Subtle animations for results */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.analyzer-result {
+  animation: slideInUp 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Smooth scroll for history */
+.analyzer-history {
+  scroll-behavior: smooth;
+}
+
+/* Hover effects for history items */
+.analyzer-history-item {
+  transition: all 0.2s ease-out;
+}
+
+.analyzer-history-item:hover {
+  transform: translateX(2px);
+}
+
+/* Loading animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.analyzer-loading {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .analyzer-upload-area {
+    padding: 2rem 1rem;
+  }
+
+  .analyzer-result {
+    margin-top: 1.5rem;
+  }
+}
